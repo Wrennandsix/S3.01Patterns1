@@ -13,6 +13,6 @@ public class SlowDown implements Command {
     @Override
     public void execute() {
 
-        vehicle.startUp();
+        vehicle.slowDown();
     }
 }

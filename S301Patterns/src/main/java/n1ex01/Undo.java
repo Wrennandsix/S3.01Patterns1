@@ -12,7 +12,7 @@ public final class Undo {
 	private Undo() {
 		this.orders = new ArrayList<String>();
 	}
-	
+
 	public static Undo getInstance() {
 		if (instance == null) {
 			instance = new Undo();
@@ -23,16 +23,14 @@ public final class Undo {
 	public String requestOrder() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Write the order you want to save");
-		String order = sc.next();
-		return order;
+		return sc.next();
 
 	}
 
 	public String requestRemoveOrder() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Write the order you want to remove from our database");
-		String order = sc.next();
-		return order;
+		return sc.next();
 
 	}
 
@@ -41,11 +39,13 @@ public final class Undo {
 		System.out.println(orders);
 
 	}
+
 	public void showOrders() {
 		for (String order : orders) {
 			System.out.println(order);
 		}
 	}
+
 	public void removeOrder(String orderToRemove) {
 		boolean finded = false;
 
